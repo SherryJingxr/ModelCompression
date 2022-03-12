@@ -1,0 +1,285 @@
+\documentclass[conference]{IEEEtran}
+
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote.
+%If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{verbatim}
+\usepackage{makecell}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+		T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\DeclareUnicodeCharacter{2212}{\textendash}
+\begin{document}
+	
+	\title{Title\\
+		{\footnotesize \textsuperscript{*}Note: Sub-titles are not captured in Xplore
+			and
+			should not be used}
+		\thanks{Identify applicable funding agency here. If none, delete this.}
+	}
+	
+	\author{\IEEEauthorblockN{1\textsuperscript{st} Given Name Surname}
+		\IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+			\textit{name of organization (of Aff.)}\\
+			City, Country \\
+			email address or ORCID}
+		\and
+		\IEEEauthorblockN{2\textsuperscript{nd} Given Name Surname}
+		\IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+			\textit{name of organization (of Aff.)}\\
+			City, Country \\
+			email address or ORCID}
+		\and 
+		\IEEEauthorblockN{3\textsuperscript{nd} Given Name Surname}
+		\IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+			\textit{name of organization (of Aff.)}\\
+			City, Country \\
+			email address or ORCID}
+		\and
+		\IEEEauthorblockN{4\textsuperscript{nd} Given Name Surname}
+		\IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+			\textit{name of organization (of Aff.)}\\
+			City, Country \\
+			email address or ORCID}
+		\and
+		\IEEEauthorblockN{5\textsuperscript{nd} Given Name Surname}
+		\IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+			\textit{name of organization (of Aff.)}\\
+			City, Country \\
+			email address or ORCID}
+	}
+	
+	\maketitle
+	\begin{abstract}
+		
+	\end{abstract}
+	
+	\begin{IEEEkeywords}
+		component, formatting, style, styling, insert
+	\end{IEEEkeywords}
+	
+	\section{Introduction}
+	\begin{comment}
+		Learning in acoustic environmental noise is challenging due to its own
+		characteristics. On the one hand, the noise waveforms of different acoustic
+		scenes are relatively stable, and it is difficult to extract useful features. On
+		the other hand, there are similarities in the acoustic characteristics of
+		different environments, for example, there may be human voices in the speech
+		data collected for several seconds from both the parks and public squares
+		scenarios, which brings greater challenges to feature extraction.
+	\end{comment}
+	\begin{comment}
+		
+		工地状态监测是物联网技术和工业领域相结合的典型应用，对工地运行状态进行远程监督起到至关重要的作用（总）。随着对生产质量、系统性能、经济发展和环境问题的要求越来越高，现代工业过程在结构和自动化程度方面都更加复杂。
+		因此，这些复杂过程的可靠性和安全性问题成为系统设计中最关键的方面，将物联网与工业监测相结合的技术中在当今受到越来越多的关注[1]。与传统的物联网相比，工业物联网有自己的特点[2]，例如，设备的寿命通常以几十年为度量，
+		此外，大部分工业机器通常位于恶劣的环境中，分布范围较广，物理环境乃至网络环境复杂。
+		工业监测系统的设计应满足如下几个要求：
+		1. 监控设备的安装和维护成本应该仅为资产价值的百分之几，因此大多使用能量收集装置或者电池供电
+		2.设备使用寿命和维护间隔应该尽可能的长，通常为数十年
+		3. 监控系统的物联网节点大范围分布，以减少部署成本，且在工作时消耗极少的能量。
+		对于大部分设备，监控设备的安装和维护成本应该仅为资产价值的百分之几
+		物联网工地环境监测LPWAN的低功耗设备进行监测➡LPWAN具有低功耗、远距离传输等特性。边缘数据有学习的价值，合理学习可以减少传输量，降低功耗（传输数据时功耗mw级）➡有必要实现边缘节点智能化➡模型庞大难以部署，且不同的节点任务不同，需要一种可以普遍适用的压缩方法➡提出一种知识蒸馏的机制，（从原始的十类问题中抽取四类，且当分类目标发生改变时，只需要重新训练小模型即可），可以从大模型中动态的学习知识
+		
+		工业监测系统应当在设备发生故障前期
+		$\textbf{Industrial Acoustic Environment Monitoring}$(IAEM) is a typical
+		application of the combination of Internet of Things ($\textbf{IoT}$) technology
+		and industrial fields\cite{RAY2018291}, which plays a critical role in remote
+		monitoring of construction site operation conditions. With increasing demands on
+		system performance, economic development and environmental concerns, modern
+		industrial processes are more complicated in both structure and degree of
+		automation. Therefore, the reliability and safety issues of these complex
+		processes become the most critical aspects in system design, and technologies
+		that combine IoT with industrial monitoring are receiving more and more
+		attention today\cite{6717991}.Compared with the traditional Internet of
+		Things(IoT), the Industrial Internet of Things has its own
+		characteristics\cite{8539100}, \textit{e.g.}, the lifespan of equipment is
+		usually measured in decades. In addition, most industrial machines are usually
+		located in harsh environments, with a wide distribution range, physical
+		environment and even unpredictable network environment.
+		The design of IAEM needs to meet the following requirements: i. The
+		installation and maintenance cost of monitoring equipment should be a few
+		percent of machinery, so most use energy harvesting devices or battery power.
+		ii. Surveillance system lifetime and maintenance intervals should be as long as
+		possible, typically decades. iii. The IoT nodes in the monitoring system are
+		widely distributed to reduce deployment costs and consume very little energy
+		during operation.
+		
+	\end{comment}
+	\begin{comment}
+		
+		智慧城市是物联网的典型应用场景。由于城市人口的爆炸性增长，智慧城市的相关技术成为城市发展的关键部分。根据[1]，到2050年，世界人口中的城市人口高达68%。这种情况产生的问题给当地政府带来巨大的挑战，比如交通安全问题，空气和质量问题，经济发展问题以及住房问题。
+		
+		从信息和通信基础设施技术的布局来看，智慧城市是一个自成一体的城镇[2]。现代城市通过部署传感器，通过它们从外面世界捕获数据，智慧城市对数据做智能化的分析，提出智能化的解决方案。例如通过the
+		intelligent transportation system
+		(ITS)可以城市道路上的渣土车是否超重，也可以对道路车流量进行实时监控.但是，传感器获取的当今世界的事件纷繁复杂，如何合理提取数据的有价值部分，如何在保证可靠性和高效性的同时分析这些复杂时间成为系统设计中最关键的方面。
+		
+		在当前标准的物联网中，数据的流向如图2所示,位于网络边缘，部有传感器的节点将感知的海量数据传回云中心。然而，这种结构存在缺陷:物联网设备数量急剧增长，边缘设备产生的数据以指数级趋势增长，大部分边缘数据被丢弃，甚至只有少部分才能回传到云服务器，且和节点正常工作的功耗相比，数据回传到服务器的处理过程耗能。此外，数据传输回云服务器，对通信链路质量有巨大挑战，且会导致网络延迟，在一些对时延高度敏感的场景不适用，例如智能驾驶。最后，传输使数据安全受到威胁，因为此类数据会被恶意行为者拦截。
+	\end{comment}
+	Smart city is a typical application scenario of Internet of Things(IoT). Due to
+	the explosive growth of the population, related technologies for smart cities
+	become a key part of urban development. According to
+	\cite{doi:10.1177/1550147719853984}, by 2050, the urban population of the world
+	population will be as high as 68$\%$. The problems created by this situation
+	pose a huge challenge to the local government, such as traffic safety problems,
+	air and quality problems, economic development problems and housing problems.
+	
+	From the perspective of the layout of information and communication
+	infrastructure technology, a smart city is a self-contained town\cite{article},
+	as shown in \figurename. Modern cities capture data from the outside world by
+	deploying sensors, smart cities analyze data intelligently, and propose
+	intelligent solutions,\textit{ e.g. the intelligent transportation system
+		(ITS)}\cite{8824092} can judge whether the muck trucks on the urban roads are
+	overweight, and can also monitor the road traffic flow in real time. However,
+	the events of today's world captured by sensors are numerous and complicated.
+	How to reasonably extract valuable parts of the data and how to analyze these
+	complex times while ensuring reliability and efficiency have become the most
+	critical aspects of system design. In the current standard IoT, the flow of data
+	is shown in Figure 2. Devices with sensors at the edge of the network transmit
+	massive amounts of sensed data back to the cloud server center. According to
+	statistics, the number of IoT devices has grown rapidly, and the data generated
+	by edge devices has grown exponentially. Most of the edge data is discarded, and
+	even only a small part can be sent back to the cloud server. What's more, compared with power consumption, the processing of data back to the server consumes more energy. In addition, the
+	transmission of data back to the cloud server poses a huge challenge to the
+	quality of the communication link and will cause network delay, which is not
+	applicable in some scenarios that are highly sensitive to delay, such as
+	intelligent driving. Finally, transmission puts data security at risk because
+	such data can be intercepted by malicious behavior.
+	\begin{center}
+		\begin{figure}[h]
+			\caption{smart city overview}
+		\end{figure}
+	\end{center}
+	\begin{center}
+		\begin{figure}[h]
+			\caption{the data of flow in IoT}
+		\end{figure}
+	\end{center}
+	\begin{comment}
+		因此，有必要让边缘节点智能化, 这样的话边缘节点的数据不需要回传到云，节点在采集到数据以后就可以自行做出决策，有效降低传输带来的额外开销，提高通信链路的可靠性和数据的安全性。从[]可知目前已有大量研究将智能化的方法用到物联网的边缘节点上，但是，目前的研究依然有局限性。一方面，这些位于网络边缘的移动设备的上层依然需要主干网络（云）的支持，另一方面，智慧城市中，节点通常需要大规模部署，现有的移动端设备智能化方法依然带来成本和开销问题。
+	\end{comment}
+	
+	Accordingly, it is necessary to make the edge nodes intelligent, so that the data of the edge nodes do not need to be sent back to the cloud, and the nodes can make their own decisions after collecting the data, which can effectively reduce the extra overhead caused by the transmission and improve the reliability of communication links and data security. It can be seen from \cite{1234} that there have been a lot of researches on applying intelligent methods to the edge nodes of the Internet of Things, most of which are aimed at mobile devices. However, the current study still has limitations. On the one hand, the upper layer of mobile devices located at the network edge still needs the support of the backbone network (cloud). On the other hand, in smart cities, edge nodes usually need to be deployed on a large scale, but there are still cost and overhead problems in the existing intelligent methods of mobile devices. 
+	\begin{comment}
+		LPWAN是物联网的一种无线通信技术，由于其低功耗、远距离和低成本的通信特性，在工业和研究领域越来越受欢迎。近年来，针对提高LPWAN网络的可延展性，减少网络拥塞等方面已经有大量研究,但仍然难以应对爆炸式的数据增长。如果在LPWAN实现边缘节点的智能化，意味着数据在前端就可以提供有价值的信息，不需要回传给云了。例如，如果在夜晚建筑工地有违规操作的情况，即当前环境噪声超过标准时，边缘节点立刻发出警报。但是，LPWAN的节点和移动设备的资源相比，有很大的差距, 实现LPWAN节点智能化有一定的挑战。
+	\end{comment}
+
+	Low-Power-Wireless-Area-Network(LPWAN)\cite{MEKKI20191} is a wireless communication technology for the Internet of Things, which is gaining popularity in industry and research fields due to its low power consumption, long distance and low cost communication characteristics. In recent years, a lot of research\cite{9259375}\cite{9259397}\cite{9212919} has been done on improving the scalability of LPWAN networks and reducing network congestion, but it is still difficult to cope with the explosive data growth. If the intelligence of edge nodes can be realized in LPWAN, it means that data can provide valuable information at the edge, and there is no need to send it back to the cloud. For example, if there are illegal operations at the construction site at night, that is, the current environmental noise exceeds standard time, the edge node will send an alarm immediately. However, compared with the resources of LPWAN nodes and mobile devices, there is a big gap, and there are certain challenges to realize the intelligentization of LPWAN nodes.
+	
+	\section{Related Work}
+	\subsection{Acoustic scene classification}
+	The prestigious detection and classification of acoustic scene and events
+	(DCASE)\cite{RN200} challenge covers state-of-the-art techniques for classifying acoustic environmental noise.\\ 
+	\cite{2019}\cite{10.1145/3485730.3493448}\cite{Hannun2014DeepSS} both use data
+	augmentation to expand the training set to bring larger samples for model
+	training.
+	\cite{2019} focuses on improving model performance on the data, demonstrating
+	the importance of data preprocessing for embedded machine learning performance.
+	From a data-centric perspective, \cite{10.1145/3485730.3493448} proves that the
+	parameter setting of data preprocessing has a certain impact on model
+	fairness.\\
+	In recent years, research in acoustic scene classification has focused on CNN
+	network\cite{electronics10040371}, especially ResNet\cite{he2015deep} and
+	DenseNet\cite{huang2018densely}.
+	They have excellent performance in the field of image processing, but due to the
+	characteristics of the acoustic scene, if the resnet is directly applied to
+	them, the network performance will be greatly reduced.
+	\cite{Kim2021BroadcastedRL} proves this, and proposes to use 1D and 2D
+	convolution in speech data at the same time, extending the time output to the
+	frequency time dimension. \cite{koutini2019receptive} proves the effect of
+	receptive field on generalization ability in acoustic scene classification
+	problem.
+	\subsection{Model Compression}
+	Model compression has abundant research achievement\cite{9043731}. From the
+	perspective of model structure, \cite{szegedy2015rethinking}\cite{wu2017shift}
+	improves the convolution kernel structure of the commonly used convolutional
+	neural network (CNN). \cite{1102314}Tensor (or matrix) operations are the basic
+	operations of neural networks, so tensor decomposition is an effective way to
+	shrink and speed up neural network models.
+	\cite{10.5555/2969442.2969588}\cite{6986082}\cite{deng2018gxnornet}Data
+	quantization is designed to solve the problem that most embedded devices do not
+	support floating-point operations, and is widely used in model compression of
+	mobile devices.
+	
+	In addition, in the image domain, many lightweight networks for compressing
+	models emerge, which greatly reduces the amount of parameters and memory
+	overhead. The fire module of Squeezenet\cite{iandola2016squeezenet} is composed
+	of squeeze and expand parts. The commonly used 3×3 convolution kernel is
+	replaced with a 1×1 convolution kernel, which effectively reduces the number of
+	parameters. In order to improve the model accuracy, a small number of 3×3
+	convolution kernels are spliced in the expand layer. The great thing about
+	MobileNets\cite{howard2017mobilenets}\cite{sandler2019mobilenetv2}\cite{howard2019searching}
+	are the design of the depthwise separable convolutional structure, which reduces
+	the complexity exponentially. These studies have achieved certain performance on
+	images, but the compressed models are still difficult to use in low-power
+	embedded devices.
+	
+	Another perspective is the knowledge distillation method, which is often used in
+	acoustic scene classification problems\cite{9186616}.The development of
+	knowledge distillation tends to two directions: In general, the ensemble network
+	is considered to perform better, especially if the ensemble network is migrated
+	to a student model, the latter will achieve better
+	results\cite{DBLP:journals/corr/abs-2012-09816}. Another trend is to transfer a
+	deep complex network to a small and shallow network, also known as the
+	teacher-student model. In this paper, we focus the latter,    .
+	Hinton\cite{hinton2015distilling} designed the teacher-student structure, that
+	first training a huge teacher model, and then learning a relatively small model
+	from the teacher model. \cite{GAO2021154} verifies that although the knowledge
+	distillation method can reduce the loss of the student model, there is still a
+	big gap compared with the teacher model. So an assistant model called RKD was
+	introduced to further distill the knowledge. 
+	
+	In addition, \cite{9157588} pointed out that in the existing compression techniques, the more constraints, even the most advanced CNN (mobilenet v3) cannot meet the requirements. Therefore, they propose dynamic convolution to increase the representation power of negligible extra FLOPs
+	\subsection{Machine learning in LPWAN}
+	In recent years, the compressed models are mostly deployed on mobile devices,
+	which are all implemented relying on the backbone network. The implementation of
+	AI technology in LPWAN is mainly concentrated in the field of cognitive
+	radio\cite{8972333}. \cite{8792213}employs deep neural networks (DNNs) to
+	intelligently explore data-driven test statistics to accurately characterize
+	real-world environments. \cite{8480446} proposed a cognitive C-LPWAN
+	architecture based on an artificial intelligence cognitive engine to reduce
+	network latency and minimum energy consumption rate, incorporating sensor
+	selection for a battery-powered IoT-assisted cognitive radio (CR-IoT) network
+	The strategy is applied in LPWAN to extend the life of LoRa network.
+	
+	\cite{RN197}\cite{9527865}\cite{75b8d541944c436189a449570b9d92f9}\cite{RN202}
+	\cite{lin2020mcunet}implement machine learning algorithms in embedded devices.
+	\cite{RN197} designed a  serial-FFT-based Mel-frequency
+	cepstrum coefficient circuit, and used binary depthwise separable convolution to
+	reduce power consumption. \cite{lin2020mcunet} jointly designed a framework for
+	an efficient neural architecture (TinyNAS) and a lightweight inference engine
+	(TinyEngine), and its inference speed is 1.7-3.3× faster than TF-Lite Micro and
+	CMSIS-NN.
+	\begin{center}
+		\setlength{\tabcolsep}{0.5mm}
+		\begin{tabular}{|cccc|}
+			\hline
+			& Model& MCU& \thead{Task$\&$Perf(Acc,Energy)}\\
+			\hline
+			\thead{\cite{75b8d541944c436189a449570b9d92f9}}&DSCNN&\thead{28 nm CMoS}&\thead{One-word KWS:98$\%$,
+				510-nW \\ Two word KWS:94.6$\%$, 510-nW}\\
+			\hline
+			\thead{\cite{9527865}\\ \cite{RN202}\\}&CNN&\thead{STM NUCLEO-L476RG\\ ARM Cortex M4F processor}&\thead{Image binary classification:76.7$\%$,16.5mW\\evaluate different pre-processing
+				techniques }\\
+			\hline
+			\thead{\cite{10.1145/3410992.3411014}}&SVM&\thead{nRF52840 \\Adafruit Feather
+				\\STM32f103c8 and so on}&\thead{binary classification:92.85$\%$}\\
+			\hline
+		\end{tabular}
+	\end{center}
+	
+	
+	
+	\newpage
+	\bibliographystyle{IEEEtran}
+	\bibliography{IEEEabrv,reference}
+	
+	
+	
+	
+\end{document}
+
