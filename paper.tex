@@ -171,28 +171,31 @@
 	Low-Power-Wireless-Area-Network(LPWAN)\cite{MEKKI20191} is a wireless communication technology for the Internet of Things, which is gaining popularity in industry and research fields due to its low power consumption, long distance and low cost communication characteristics. In recent years, a lot of research\cite{9259375}\cite{9259397}\cite{9212919} has been done on improving the scalability of LPWAN networks and reducing network congestion, but it is still difficult to cope with the explosive data growth. If the intelligence of edge nodes can be realized in LPWAN, it means that data can provide valuable information at the edge, and there is no need to send it back to the cloud. For example, if there are illegal operations at the construction site at night, that is, the current environmental noise exceeds standard time, the edge node will send an alarm immediately. However, compared with the resources of LPWAN nodes and mobile devices, there is a big gap, and there are certain challenges to realize the intelligentization of LPWAN nodes.
 	
 	\section{Related Work}
-	\subsection{Acoustic scene classification}
-	The prestigious detection and classification of acoustic scene and events
-	(DCASE)\cite{RN200} challenge covers state-of-the-art techniques for classifying acoustic environmental noise.\\ 
-	\cite{2019}\cite{10.1145/3485730.3493448}\cite{Hannun2014DeepSS} both use data
-	augmentation to expand the training set to bring larger samples for model
-	training.
-	\cite{2019} focuses on improving model performance on the data, demonstrating
-	the importance of data preprocessing for embedded machine learning performance.
-	From a data-centric perspective, \cite{10.1145/3485730.3493448} proves that the
-	parameter setting of data preprocessing has a certain impact on model
-	fairness.\\
-	In recent years, research in acoustic scene classification has focused on CNN
-	network\cite{electronics10040371}, especially ResNet\cite{he2015deep} and
-	DenseNet\cite{huang2018densely}.
-	They have excellent performance in the field of image processing, but due to the
-	characteristics of the acoustic scene, if the resnet is directly applied to
-	them, the network performance will be greatly reduced.
-	\cite{Kim2021BroadcastedRL} proves this, and proposes to use 1D and 2D
-	convolution in speech data at the same time, extending the time output to the
-	frequency time dimension. \cite{koutini2019receptive} proves the effect of
-	receptive field on generalization ability in acoustic scene classification
-	problem.
+	\begin{comment}
+		\subsection{Acoustic scene classification}
+		The prestigious detection and classification of acoustic scene and events
+		(DCASE)\cite{RN200} challenge covers state-of-the-art techniques for classifying acoustic environmental noise.\\ 
+		\cite{2019}\cite{10.1145/3485730.3493448}\cite{Hannun2014DeepSS} both use data
+		augmentation to expand the training set to bring larger samples for model
+		training.
+		\cite{2019} focuses on improving model performance on the data, demonstrating
+		the importance of data preprocessing for embedded machine learning performance.
+		From a data-centric perspective, \cite{10.1145/3485730.3493448} proves that the
+		parameter setting of data preprocessing has a certain impact on model
+		fairness.\\
+		In recent years, research in acoustic scene classification has focused on CNN
+		network\cite{electronics10040371}, especially ResNet\cite{he2015deep} and
+		DenseNet\cite{huang2018densely}.
+		They have excellent performance in the field of image processing, but due to the
+		characteristics of the acoustic scene, if the resnet is directly applied to
+		them, the network performance will be greatly reduced.
+		\cite{Kim2021BroadcastedRL} proves this, and proposes to use 1D and 2D
+		convolution in speech data at the same time, extending the time output to the
+		frequency time dimension. \cite{koutini2019receptive} proves the effect of
+		receptive field on generalization ability in acoustic scene classification
+		problem.
+	\end{comment}
+	
 	\subsection{Model Compression}
 	Model compression has abundant research achievement\cite{9043731}. From the
 	perspective of model structure, \cite{szegedy2015rethinking}\cite{wu2017shift}
@@ -231,9 +234,17 @@
 	from the teacher model. \cite{GAO2021154} verifies that although the knowledge
 	distillation method can reduce the loss of the student model, there is still a
 	big gap compared with the teacher model. So an assistant model called RKD was
-	introduced to further distill the knowledge. 
+	introduced to further distill the knowledge.\cite{stanton2021does} demonstrate the importance of the data for the success of distillation, while elicting that fidelity and generalization are measures of knowledge ditillation success.\cite{RN214} design a distillation loss function based on
+	Kullback-Leibler divergence to transfer the acquired knowledge
+	from a teacher model trained on offline data, to a small-size
+	student model for online data, and simultaneously apply online knowledge distillation and offline knowledge distillation to reduce the reasoning delay of the student network
 	
 	In addition, \cite{9157588} pointed out that in the existing compression techniques, the more constraints, even the most advanced CNN (mobilenet v3) cannot meet the requirements. Therefore, they propose dynamic convolution to increase the representation power of negligible extra FLOPs
+	\subsection{2022.03.15 new motivation}
+	Incremental learning:When faced with a new class, the computer can learn from the data distribution of the previous task without retraining on a large amount of new data\\
+	For the scenario:  For the scenario: The IoT data world is complex, when sensor nodes capture new categories, retrain the model with incremental training methods.
+	\cite{RN216}\cite{rebuffi2017icarl} 
+	
 	\subsection{Machine learning in LPWAN}
 	In recent years, the compressed models are mostly deployed on mobile devices,
 	which are all implemented relying on the backbone network. The implementation of
@@ -258,7 +269,7 @@
 		\setlength{\tabcolsep}{0.5mm}
 		\begin{tabular}{|cccc|}
 			\hline
-			& Model& MCU& \thead{Task$\&$Perf(Acc,Energy)}\\
+			& Model& Device& \thead{Task$\&$Perf(Acc,Energy)}\\
 			\hline
 			\thead{\cite{75b8d541944c436189a449570b9d92f9}}&DSCNN&\thead{28 nm CMoS}&\thead{One-word KWS:98$\%$,
 				510-nW \\ Two word KWS:94.6$\%$, 510-nW}\\
@@ -268,6 +279,8 @@
 			\hline
 			\thead{\cite{10.1145/3410992.3411014}}&SVM&\thead{nRF52840 \\Adafruit Feather
 				\\STM32f103c8 and so on}&\thead{binary classification:92.85$\%$}\\
+			\hline
+			\cite{RN217}&\thead{DSCNN}&Rasberry pi4&\\
 			\hline
 		\end{tabular}
 	\end{center}
